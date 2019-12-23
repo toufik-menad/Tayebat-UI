@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('install build') {
             steps {
-            sh 'echo "########## building for prod ###############"
+            sh 'echo "########## building for prod ###############"'
             sh 'npm install'
             sh 'npm run build'
             }
