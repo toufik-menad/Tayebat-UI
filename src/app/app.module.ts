@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularMaterialModule} from './angular-material/angular-material.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { AngularMaterialModule} from './angular-material/angular-material.module
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
