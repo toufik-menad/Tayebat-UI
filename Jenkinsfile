@@ -6,6 +6,7 @@ pipeline {
             sh 'echo "########## building for prod ###############"'
             sh 'npm install'
             sh 'npm run build'
+            sh 'echo "########## building for prod finished ###############"'
             }
         }
     }
