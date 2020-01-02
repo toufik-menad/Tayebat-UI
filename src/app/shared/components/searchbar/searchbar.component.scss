@@ -1,3 +1,26 @@
+
+$iphone5: 320px;
+$GalaxyS5: 360px;
+$iphone678: 375px;
+$iphonex: 375px;
+$pixel2: 411px;
+$iphone678plus: 414px;
+$ipad: 768px;
+$ipadpro: 1024px;
+
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: black !important;
+}
+
+
+@mixin resizeMixin($screen) {
+  @media (min-width: #{$screen}) {
+      @content;
+  }
+}
+
+
 .searchbar {
   display: flex;
   flex-direction: row;
@@ -21,6 +44,65 @@
 
 }
 
-::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
-    background-color: black !important;
+@include resizeMixin(0) {
+  .searchbar {
+    &__formfield {
+      width: 50px;
+    }
+  }
+}
+@include resizeMixin($iphone5) {
+  .searchbar {
+    &__formfield {
+      width: 250px;
+    }
+  }
+}
+
+@include resizeMixin($GalaxyS5) {
+  .searchbar {
+    &__formfield {
+      width: 300px;
+    }
+  }
+}
+@include resizeMixin($iphone678) {
+  .searchbar {
+    &__formfield {
+      width: 320px;
+    }
+  }
+}
+
+@include resizeMixin($pixel2) {
+  .searchbar {
+    &__formfield {
+      width: 360px;
+    }
+  }
+}
+
+
+@include resizeMixin($iphone678plus) {
+  .searchbar {
+    &__formfield {
+      width: 360px;
+    }
+  }
+}
+
+@include resizeMixin($ipad) {
+  .searchbar {
+    &__formfield {
+      width: 700px;
+    }
+  }
+}
+
+@include resizeMixin($ipadpro) {
+  .searchbar {
+    &__formfield {
+      width: 500px;
+    }
+  }
 }

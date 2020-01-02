@@ -31,5 +31,10 @@ $tayebat-ui-theme: mat-light-theme($tayebat-ui-primary, $tayebat-ui-accent, $tay
   padding: 0;
   margin: 0;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+    height: 100%; 
+    margin: 0px;
+}
+body { 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
