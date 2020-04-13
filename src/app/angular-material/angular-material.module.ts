@@ -24,8 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MaterialModule
+    MatIconModule
   ]
 })
 export class AngularMaterialModule { }
