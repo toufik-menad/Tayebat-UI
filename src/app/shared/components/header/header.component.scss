@@ -1,19 +1,27 @@
-.header {
-  display: flex;
-  background-color: black;
-  justify-content: flex-start;
-  align-content: center;
-  padding: 10px;
-  flex-direction: row;
-  height: 110px;
-  width: 100%;
+@mixin header_mixin($theme) {
 
-  &__logo {
-    background-color: transparent;
-    height: 90px;
-    width: 110px;
-    background-image: url('/assets/images/logo.svg');
-    background-repeat: no-repeat;
-    object-fit: contain;
+$primary:map-get($theme, primary);
+
+  .header {
+    display: flex;
+    background-color: mat-color($primary, 800);
+    justify-content: flex-start;
+    align-content: center;
+    padding: 10px;
+    flex-direction: row;
+    height: 110px;
+    width: 100%;
+  
+    &__logo {
+      background-color: transparent;
+      height: 90px;
+      width: 110px;
+      background-image: url('/assets/images/logo.svg');
+      background-repeat: no-repeat;
+      object-fit: contain;
+    }
   }
+  
 }
+
+
