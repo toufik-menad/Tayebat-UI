@@ -66,6 +66,7 @@ $ipadpro: 1024px;
   }
 }
 
+
 @include resizeMixin($GalaxyS5) {
   .searchbar {
     &__formfield {
