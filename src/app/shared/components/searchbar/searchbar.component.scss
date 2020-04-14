@@ -57,6 +57,7 @@ $ipadpro: 1024px;
     }
   }
 }
+
 @include resizeMixin($iphone5) {
   .searchbar {
     &__formfield {
