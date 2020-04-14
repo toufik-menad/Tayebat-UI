@@ -1,3 +1,4 @@
+@import '~@angular/material/theming';
 
 $iphone5: 320px;
 $GalaxyS5: 360px;
@@ -20,7 +21,6 @@ $ipadpro: 1024px;
   }
 }
 
-
 .searchbar {
   display: flex;
   flex-direction: row;
@@ -31,7 +31,8 @@ $ipadpro: 1024px;
 
   &__formfield {
 
-    width: 500px;
+    width: 480px;
+    height: 20px;
 
     &__input {
       background-color: #F5F5F5;
@@ -39,6 +40,12 @@ $ipadpro: 1024px;
       width: 100%;
       border-radius: 15px;
       text-align: center;
+    }
+
+    &__search {
+      margin-top: 18px;
+      margin-left: 5px;
+      @include mat-elevation(3, #e91e63, 0.5);
     }
   }
 

@@ -2,15 +2,19 @@
 @include mat-core();
 
 // import mixins
-@import '/src/app/shared/components/header/header.component.scss';
+@import '~src/app/shared/components/header/header.component';
 
-$tayebat-ui-primary: mat-palette($mat-indigo);
-$tayebat-ui-accent: mat-palette($mat-pink, A200, A100, A400);
-$tayebat-ui-warn: mat-palette($mat-red);
+$primary: mat-palette($mat-indigo);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+$theme: mat-light-theme($primary, $accent);
 
-$tayebat-ui-theme: mat-light-theme($tayebat-ui-primary, $tayebat-ui-accent, $tayebat-ui-warn);
-@include angular-material-theme($tayebat-ui-theme);
+@include angular-material-theme($theme);
 
 
 // call mixins
-@include header_mixin($tayebat-ui-theme);
+@include header_mixin($theme);
+
+my-class-with-custom-shadow {
+    // Adds a shadow for elevation level 2 with color #e91e63 and 80% of the default opacity:
+    @include mat-elevation(2, #e91e63, 0.8);
+  }
