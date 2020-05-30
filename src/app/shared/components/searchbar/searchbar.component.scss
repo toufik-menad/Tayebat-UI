@@ -9,10 +9,14 @@ $iphone678plus: 414px;
 $ipad: 768px;
 $ipadpro: 1024px;
 
-
-::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
-  background-color: black !important;
+@mixin search_bar_mixin($theme) {
+  $primary:map-get($theme, primary);
+  
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: mat-color($primary, 800) !important;
+  }
 }
+
 
 
 @mixin resizeMixin($screen) {
