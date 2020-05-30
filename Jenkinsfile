@@ -1,4 +1,3 @@
-@GrailsCompileStatic
 pipeline {
     agent any
     stages {
