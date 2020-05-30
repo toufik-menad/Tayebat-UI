@@ -2,27 +2,27 @@ pipeline {
     agent any
     stages {
         stage ('Checkout source'){
-           step {
+           steps {
                checkout scm
         }
         stage ('Checkout source'){
-           step {
+           steps {
                sh 'npm install'
         }
         stage ('Checkout source'){
-           step {
+           steps {
                sh 'npm run test'
         }
         stage ('Clean dist folder'){
-            step {
+            steps {
                 sh 'rm -r dist/'
         }
         stage('Build') {
-            step {
+            steps {
                 sh 'npm run build'
         }
         stage('Deploy to server'){
-            step {
+            steps {
                 sh 'sudo rsync -r /var/lib/jenkins/workspace/TayebatUI/dist/tayebat-ui/ /var/www/halaalbite.com/html/'
         }
     }
