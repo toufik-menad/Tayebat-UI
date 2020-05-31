@@ -18,7 +18,7 @@ pipeline {
         }
         stage ('Clean dist folder') {
             steps {
-                sh 'rm -r dist/'
+                sh 'rm -rf dist/'
             }
         }
         stage('Build') {
